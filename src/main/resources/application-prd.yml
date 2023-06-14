@@ -1,0 +1,8 @@
+correios:
+  client:
+    base-url: https://api.correios.com.br
+
+#-- logging --------------------------------------------------------------------------------------------------------------
+logging:
+  level:
+    root: INFO

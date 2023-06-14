@@ -1,0 +1,25 @@
+correios:
+
+  credencial:
+    usuario: ${CORREIOS_USUARIO}
+    senha: ${CORREIOS_SENHA}
+    contrato: ${CORREIOS_CONTRATO:}
+    url-token: ${correios.client.base-url}/token
+
+  client:
+    preco-url: ${correios.client.base-url}/preco
+    rastro-url: ${correios.client.base-url}/srorastro
+
+spring:
+  jackson:
+    time-zone: America/Sao_Paulo
+    default-property-inclusion: NON_NULL
+    date-format: "yyyy-MM-dd'T'HH:mm:ss"
+    serialization:
+      write-empty-json-arrays: false
+
+
+#-- logging --------------------------------------------------------------------------------------------------------------
+logging:
+  file:
+    name: techday.log

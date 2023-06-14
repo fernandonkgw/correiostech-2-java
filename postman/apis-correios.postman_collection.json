@@ -1,0 +1,597 @@
+{
+	"info": {
+		"_postman_id": "321191b5-1753-4b27-abad-e810294e6ce6",
+		"name": "apis-correios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "preco (34)",
+			"item": [
+				{
+					"name": "consulta lista preco",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idLote\": \"202306141030LS\",\n    \"parametrosProduto\": [\n        {\n            \"nuRequisicao\": \"202306141030\",\n            \"coProduto\": \"04162\",\n            \"psObjeto\": 300,\n            \"cepOrigem\": \"71930000\",\n            \"cepDestino\": \"05336010\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apihom.correios.com.br/preco/v1/nacional",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"preco",
+								"v1",
+								"nacional"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta um preco",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apihom.correios.com.br/preco/v1/nacional/04162?psObjeto=300&cepOrigem=71930000&cepDestino=05336010",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"preco",
+								"v1",
+								"nacional",
+								"04162"
+							],
+							"query": [
+								{
+									"key": "psObjeto",
+									"value": "300"
+								},
+								{
+									"key": "cepOrigem",
+									"value": "71930000"
+								},
+								{
+									"key": "cepDestino",
+									"value": "05336010"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "preco async (27)",
+			"item": [
+				{
+					"name": "consulta lista preco",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idLote\": \"202306141030LA\",\n    \"parametrosProduto\": [\n        {\n            \"nuRequisicao\": \"202306141030\",\n            \"coProduto\": \"04162\",\n            \"psObjeto\": 300,\n            \"cepOrigem\": \"71930000\",\n            \"cepDestino\": \"05336010\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apihom.correios.com.br/preco-async/v1/nacional",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"preco-async",
+								"v1",
+								"nacional"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta lista por recibo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apihom.correios.com.br/preco-async/v1/nacional/8049802f-ce0c-411a-aa7d-c66a6b949889",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"preco-async",
+								"v1",
+								"nacional",
+								"8049802f-ce0c-411a-aa7d-c66a6b949889"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "prazo (35)",
+			"item": [
+				{
+					"name": "consulta um prazo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apihom.correios.com.br/prazo/v1/nacional/04162?cepOrigem=70902000&cepDestino=71930000",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"prazo",
+								"v1",
+								"nacional",
+								"04162"
+							],
+							"query": [
+								{
+									"key": "cepOrigem",
+									"value": "70902000"
+								},
+								{
+									"key": "cepDestino",
+									"value": "71930000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta lista de prazos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idLote\": \"202306141031LS\",\n    \"parametrosPrazo\": [\n        {\n            \"nuRequisicao\": \"202306141031\",\n            \"coProduto\": \"04162\",\n            \"cepOrigem\": \"71930000\",\n            \"cepDestino\": \"05336010\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apihom.correios.com.br/prazo/v1/nacional",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"prazo",
+								"v1",
+								"nacional"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pma pre-postagem (36)",
+			"item": []
+		},
+		{
+			"name": "rastro (87)",
+			"item": [
+				{
+					"name": "rastreia um objeto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apihom.correios.com.br/srorastro/v1/objetos/AA123456789BR?resultado=U",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"srorastro",
+								"v1",
+								"objetos",
+								"AA123456789BR"
+							],
+							"query": [
+								{
+									"key": "resultado",
+									"value": "U"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rastro-async (534)",
+			"item": [
+				{
+					"name": "rastreamento assincrono de objetos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"AA123456789BR\"\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apihom.correios.com.br/rastro-async/v1/objetos/async?resultado=T",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"rastro-async",
+								"v1",
+								"objetos",
+								"async"
+							],
+							"query": [
+								{
+									"key": "resultado",
+									"value": "T"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rastreamento assincrono de objetos Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"AA123456789BR\"\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apihom.correios.com.br/rastro-async/v1/recibo/b7c67d949a5d4f2dbc11a51c62b41f62",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"rastro-async",
+								"v1",
+								"recibo",
+								"b7c67d949a5d4f2dbc11a51c62b41f62"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "token (5)",
+			"item": [
+				{
+					"name": "interno",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.globals.set(\"token\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{senha}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{usuario}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://apihom.correios.com.br/token/v1/autentica",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"token",
+								"v1",
+								"autentica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cartao postagem",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.globals.set(\"token\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{senha}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{usuario}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numero\": \"{{cartaopostagem}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apihom.correios.com.br/token/v1/autentica/cartaopostagem",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"token",
+								"v1",
+								"autentica",
+								"cartaopostagem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contrato",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.globals.set(\"token\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{senha}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{usuario}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numero\": \"{{cartaopostagem}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apihom.correios.com.br/token/v1/autentica/contrato",
+							"protocol": "https",
+							"host": [
+								"apihom",
+								"correios",
+								"com",
+								"br"
+							],
+							"path": [
+								"token",
+								"v1",
+								"autentica",
+								"contrato"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
