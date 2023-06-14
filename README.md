@@ -1,4 +1,3 @@
-# techday-2-java
 <center>
     <h1 align="center"> 📨 2º Correios Tech</h1>
     <p align="center"> Exemplos de integrações com APIs REST dos Correios com Java</p>
