@@ -1,0 +1,9 @@
+package br.com.correios.api.correiostech.client.token.exception;
+
+import feign.FeignException;
+
+public class TokenClientException extends FeignException {
+    public TokenClientException(int var1, String var2) {
+        super(var1, var2);
+    }
+}

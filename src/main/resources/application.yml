@@ -18,7 +18,6 @@ spring:
     serialization:
       write-empty-json-arrays: false
 
-
 #-- logging --------------------------------------------------------------------------------------------------------------
 logging:
   file:
